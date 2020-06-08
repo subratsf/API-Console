@@ -91,10 +91,10 @@
   "scripts": {
     "update-types": "NODE_OPTIONS=--max_old_space_size=2048 gen-typescript-declarations --deleteExisting --outDir .",
     "generate-model": "npm run build:models",
-    "start": "node demo/index.js",
-    "start:old": "es-dev-server --app-index demo/index.html --node-resolve --open --watch",
-    "start:server": "node --inspect demo/parsing-server/main.js",
-    "start:compatibility": "es-dev-server --app-index demo/index.html --compatibility auto --node-resolve --open --watch --babel-exclude **/vendor.js",
+    "start": "node project/index.js",
+    "start:old": "es-dev-server --app-index project/index.html --node-resolve --open --watch",
+    "start:server": "node --inspect project/parsing-server/main.js",
+    "start:compatibility": "es-dev-server --app-index project/index.html --compatibility auto --node-resolve --open --watch --babel-exclude **/vendor.js",
     "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
     "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
     "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
@@ -103,7 +103,7 @@
     "format": "npm run format:eslint && npm run format:prettier",
     "build": "rimraf dist && rollup -c rollup.config.js",
     "build:vendor": "node tasks/prepare.js",
-    "build:models": "node demo/model.js",
+    "build:models": "node project/model.js",
     "prepare": "npm run build:vendor && npm run build:models"
   },
   "lint-staged": {

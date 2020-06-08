@@ -23,7 +23,7 @@ const CmFiles = [
   'codemirror/addon/lint/json-lint.js',
 ];
 
-async function prepareDemo() {
+async function prepareProject() {
   const code = {};
   for (let i = 0, len = CryptoFiles.length; i < len; i++) {
     const file = CryptoFiles[i];
@@ -37,7 +37,7 @@ async function prepareDemo() {
   }
 
   const result = UglifyJS.minify(code);
-  await fs.writeFile(path.join('demo', 'vendor.js'), result.code, 'utf8');
+  await fs.writeFile(path.join('project', 'vendor.js'), result.code, 'utf8');
 }
 
-prepareDemo();
+prepareProject();

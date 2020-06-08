@@ -19,7 +19,7 @@ For compatibility use any previous version. Note that support for previous versi
 
 1.  Clone the element.
 ```
-git clone https://github.com/mulesoft/api-console.git
+git clone git@github.com:subratsf/RAML-OAS-API-Console.git
 cd api-console
 ```
 
